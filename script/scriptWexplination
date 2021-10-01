@@ -1,0 +1,94 @@
+function createPreviewBeer(beer) {  //creating the function: createPreviewBeer. the parameter "card" is passed into the function, beacuse I want to use it within the function
+  if (!document.getElementById("shuffle__container")) return null
+  let wrapper = document.getElementById("shuffle__container") //Looks in the html document and trying to find an element with the ID "shullfe container"
+    wrapper.innerHTML = ` 
+    <a href="${beer.link}" target="_blank">  
+    <img src="${beer.previewImage}" alt="A random image of a beer" />
+      <div class="card-wrapper__content">
+       <h2>
+       ${beer.brewery}<br>${beer.nameOfBeer}
+       </h2>
+      </div>
+      </a>`;
+ // Takes the wrapper "shuffle-container" and add this html to the div shuffle-container in the shuffle.html document
+};
+
+function formatPost(post) { //creating the function: formatPosts. the parameter "post" is passed into the function, beacuse I want to use it within the function
+  let formated = { //creating an object called formated
+    id: post.id, //Giving the object "formated" proporties
+    brewery: post.title.rendered, //Giving the object "formated" proporties
+    previewImage: post._embedded["wp:featuredmedia"][0].source_url, //Giving the object "formated" proporties
+    nameOfBeer: post.excerpt.rendered, //Giving the object "formated" proporties
+    link: 'https://www.systembolaget.se/produkt/ol/'+post.slug,
+  };
+  return formated; // Returns the object. Return = whenever the use the function you get a value.
+}
+
+function createGrid(data) {
+
+  if (!document.querySelector(".container-beer")) return null
+  for (let i = 0; i < data.length; i++) {
+    let wrapper = document.querySelector(".container-beer") //Looks in the html document and trying to find an element with the ID "shullfe container"
+    wrapper.innerHTML += ` 
+    <div class="container-beer__card">
+    <a href="${data[i].link}" target="_blank">  
+    <img src="${data[i].previewImage}" alt="A random image of a beer" />
+      <div class="card-wrapper__content">
+       <h2>
+       ${data[i].brewery}<br>${data[i].nameOfBeer}
+       </h2>
+      </div>
+      </a>
+      </div>`;
+  }
+}
+
+
+function getPosts() { //creating the function: getPosts
+  fetch("http://localhost:8888/wp-json/wp/v2/posts?_embed&per_page=100") //
+    .then((response) => response.json()) //Converts the data from wordpress into a json file
+    .then((data) => { //Gives me acces the data that is converted
+      let formatedPosts = [];
+      for (let i = 0; i < data.length; i++) { //This is a for loop that goes through all of the objects that are created in the wordpress file
+        formatedPosts.push(formatPost(data[i])) //creates a variable called "formatedPosts". data = the array and [i] is the possition of an object in the array.
+        // createPreviewBeer(formatedPosts); //running this function is giving me the result of what is visable on the website. giving me the end product
+      }
+      console.log('hello');
+      createGrid(formatedPosts) 
+
+      let randomNumber = getRandomNumber(data.length - 1);
+      createPreviewBeer(formatedPosts[randomNumber])
+
+      if (!document.getElementById("shuffle-btn")) return null
+      const shuffleBtn = document.getElementById('shuffle-btn');
+      shuffleBtn.addEventListener('click', () => {
+        randomNumber = getRandomNumber(data.length - 1);
+        createPreviewBeer(formatedPosts[randomNumber])
+      });
+    });
+}
+
+function getRandomNumber(max) {
+  return Math.floor(Math.random() * max);
+}
+
+// const randomBeer = document.getElementById('demo');
+// const shuffleBtn = document.getElementById('shuffle-btn');
+
+// shuffleBtn.addEventListener('click', fetchCatImage);
+
+// function fetchCatImage() {
+//   fetch("http://localhost:8888/wp-json/wp/v2/posts?_embed&per_page=100")
+//     .then(response => response.json())
+//     .then(data => {
+//       let formatedPosts = formatPost(data[i])
+//       let randomNumber = getRandomNumber(data.length - 1);
+//       createPreviewBeer(formatedPosts[randomNumber])
+//   })  
+// }
+
+//data is an array of all my objects that I get back from what I am fetching, in this case its all my objects I get from wordpress that is converted into a json file.
+//data[i] is the specific object in the data array
+//for loops works like: start by setting the variable i to 0 = (let i = 0; the computor then looks at the i variable and see if its less then data.legnth.
+//data.legnth is the amount of objects whithin the array "data". In this case i less than 2 (since I only have to objects as of now. Punk IPA and Mr President) If I add more objects in the array the legnth will increase.
+//If I use a for loop call the variable i = (let i = 0) but it could be called anything.

@@ -1,0 +1,205 @@
+[
+    {
+        "beer":"Punk IPA",
+        "brewery":"BrewDog",
+        "alc":"5.4%",
+        "type":["ALE", "INDIAN PALE ALE"],
+        "country":"Great Britain",
+        "img":"https://product-cdn.systembolaget.se/productimages/299605/299605_400.png"
+    },   
+    {
+        "beer":"Mr President",
+        "brewery":"BrewDog",
+        "alc":"9.2%",
+        "type":["ALE", "IMPERIAL/DOUBLE"],
+        "country":"Great Britain",
+        "img":"https://product-cdn.systembolaget.se/productimages/24513765/24513765_400.png"
+    },
+    {
+        "beer":"Galgbacken",
+        "brewery":"Barlingbo Bryggeri",
+        "alc":"5.8%",
+        "type":["ALE", "INDIAN PALE ALE"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/856511/856511_400.png"
+    },
+    {
+        "beer":"Urban Fog",
+        "brewery":"BrewDog",
+        "alc":"6.5%",
+        "type":["ALE", "NEW ENGLAND IPA"],
+        "country":"Great Britain",
+        "img":"https://product-cdn.systembolaget.se/productimages/24591763/24591763_400.png"
+    },    
+    {
+        "beer":"Indian Tribute",
+        "brewery":"Oppigårds",
+        "alc":"6.6%",
+        "type":["ALE", "INDIAN PALE ALE"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/670353/670353_400.png"
+    },    
+    {
+        "beer":"Sitting Bulldog IPA",
+        "brewery":"Gotlands Bryggeri",
+        "alc":"6.4%",
+        "type":["ALE", "INDIAN PALE ALE"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/681913/681913_400.png"
+    },  
+    {
+        "beer":"Double Bulldog DIPA",
+        "brewery":"Gotlands Bryggeri",
+        "alc":"8.4%",
+        "type":["ALE", "IMPERIAL/DOUBLE"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/695692/695692_400.png"
+    },
+    {
+        "beer":"Export",
+        "brewery":"Pripps Blå",
+        "alc":"5%",
+        "type":["Lager"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/507795/507795_400.png"
+    },  
+    {
+        "beer":"Big Wave",
+        "brewery":"Kona",
+        "alc":"4.4%",
+        "type":["ALE", "GOLDEN/BLOND"],
+        "country":"USA",
+        "img":"https://product-cdn.systembolaget.se/productimages/878407/878407_400.png"
+    },
+    {
+        "beer":"Hale Or Nothing",
+        "brewery":"Brutal Brewing",
+        "alc":"4.5%",
+        "type":["ALE", "GOLDEN/BLOND"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/626980/626980_400.png"
+    },  
+    {
+        "beer":"Golden Ale",
+        "brewery":"Oppigårds",
+        "alc":"5.2%",
+        "type":["ALE", "GOLDEN/BLOND"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/217862/217862_400.png"
+    },  
+    {
+        "beer":"Session IPA",
+        "brewery":"Poppels Bryggeri",
+        "alc":"4.2%",
+        "type":["ALE", "SESSION"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/1074696/1074696_400.png"
+    },  
+    {
+        "beer":"Lager Beer",
+        "brewery":"Innis & Gunn",
+        "alc":"4.6%",
+        "type":["LAGER"],
+        "country":"Great Britain",
+        "img":"https://product-cdn.systembolaget.se/productimages/972227/972227_400.png"
+    },  
+    {
+        "beer":"Celebration Lager",
+        "brewery":"Bernard",
+        "alc":"5%",
+        "type":["LAGER"],
+        "country":"Czech Republic",
+        "img":"https://product-cdn.systembolaget.se/productimages/678993/678993_400.png"
+    },  
+    {
+        "beer":"Premium",
+        "brewery":"Zlatopramen",
+        "alc":"4.9%",
+        "type":["LAGER"],
+        "country":"Czech Republic",
+        "img":"https://product-cdn.systembolaget.se/productimages/41071/41071_400.png"
+    },  
+    {
+        "beer":"Premium",
+        "brewery":"Rebel Original",
+        "alc":"4.8%",
+        "type":["LAGER"],
+        "country":"Czech Republic",
+        "img":"https://product-cdn.systembolaget.se/productimages/24465755/24465755_400.png"
+    },  
+    {
+        "beer":"Kustom Lager",
+        "brewery":"Pistonhead",
+        "alc":"4.9%",
+        "type":["Lager"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/586898/586898_400.png"
+    },  
+    {
+        "beer":"Hazy IPA",
+        "brewery":"Coppersmith's",
+        "alc":"6.5%",
+        "type":["ALE", "NEW ENGLAND IPA/HAZY IPA"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/14884890/14884890_400.png"
+    },  
+    {
+        "beer":"Foggy Fruit IPA",
+        "brewery":"Vega",
+        "alc":"6.9%",
+        "type":["ALE", "NEW ENGLAND IPA/HAZY IPA"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/24579619/24579619_400.png"
+    },  
+    {
+        "beer":"Orcus IPA",
+        "brewery":"Apex",
+        "alc":"6.5%",
+        "type":["ALE", "NEW ENGLAND IPA/HAZY IPA"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/24578389/24578389_400.png"
+    },  
+    {
+        "beer":"Tistron",
+        "brewery":"Brekeriet",
+        "alc":"4.8%",
+        "type":["SOUR BEER"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/24532327/24532327_400.png"
+    },
+    {
+        "beer":"Triple Berry Pie",
+        "brewery":"Brewski",
+        "alc":"4%",
+        "type":["SOUR BEER", "BERLINER WEISSE"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/24409607/24409607_400.png"
+    },  
+    {
+        "beer":"Oude Geuze",
+        "brewery":"3 Fonteinen",
+        "alc":"6%",
+        "type":["SOUR BEER", "GEUZE"],
+        "country":"Belgium",
+        "img":"https://product-cdn.systembolaget.se/productimages/925686/925686_400.png"
+    },  
+    {
+        "beer":"Berry Crush Sour",
+        "brewery":"Finn",
+        "alc":"5.6%",
+        "type":["SOUR BEER"],
+        "country":"Sweden",
+        "img":"https://sb-product-media-prod.azureedge.net/productimages/24465685/24465685_400.png"
+    },  
+    {
+        "beer":"Tropical Squeeze",
+        "brewery":"Finn",
+        "alc":"5.6%",
+        "type":["SOUR BEER"],
+        "country":"Sweden",
+        "img":"https://product-cdn.systembolaget.se/productimages/24580050/24580050_400.png"
+    }
+]
+
+
+

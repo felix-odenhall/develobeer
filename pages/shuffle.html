@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Shuffle</title>
+    <style>
+      .navbar__link {
+        color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body onload="getPosts()">
+    <!-- This is whats runs the javascript. When the body is loaded, run the function "getPosts"-->
+    <div class="background-picture"></div>
+    <nav class="navbar">
+      <a href="../index.html" class="navbar__logo">develobeer</a>
+      <ul class="navbar__list">
+        <li class="navbar__item">
+          <a href="/index.html" class="navbar__link">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Shuffle</a>
+        </li>
+        <li class="navbar__item">
+          <a href="./beers.html" class="navbar__link">Beers</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#" class="navbar__link">Contact</a>
+        </li>
+      </ul>
+      <div class="navbar__hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <header>
+      <h1>YOU SHOULD TRY</h1>
+    </header>
+    <main>
+      <section id="shuffle">
+        <div id="shuffle__container">
+          <!-- <a
+            href="https://www.systembolaget.se/produkt/ol/brewdog-punk-ipa-151503/"
+            ><img
+              src="https://product-cdn.systembolaget.se/productimages/299605/299605_400.png"
+              alt=""
+          /></a>
+
+          <h2>BrewDog's<br />PUNK IPA</h2> -->
+        </div>
+        <button id="shuffle-btn"><span>Something Else</span></button>
+      </section>
+      <div id="demo"></div>
+    </main>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
