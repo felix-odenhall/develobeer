@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "Special Elite", cursive;
+
   #shuffle__container {
     display: flex;
     flex-direction: column;
@@ -20,11 +20,6 @@
     }
     img {
       height: 40vh;
-      // animation: spinning 5s linear infinite;
-    }
-    @media only screen and (min-width: $mq-small) {
-      //   max-width: 300px;
-      margin: 15px;
     }
 
     h2 {
@@ -45,7 +40,6 @@
     border: none;
     box-shadow: 0 1px 3px 1px $color-dark-grey;
     background-color: $color-orange;
-    // background-image: $gradient-orange;
     transition: scale 0.2s ease-in;
     transition: background-color 0.1s ease-in;
     span {
@@ -61,7 +55,6 @@
     }
   }
   #shuffle-btn:hover {
-    // background-image: $gradient-orange-hover;
     background-color: $color-xtra-light-orange;
     box-shadow: 0 1px 3px 1px $color-grey;
   }
@@ -70,12 +63,3 @@
     box-shadow: none;
   }
 }
-
-// @keyframes spinning {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }

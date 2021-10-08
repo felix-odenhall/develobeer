@@ -13,21 +13,18 @@
     </style>
   </head>
   <body>
-    <div class="background-picture"></div>
+    <div class="background-picture-landing"></div>
     <nav class="navbar">
       <a href="#" class="navbar__logo">develobeer</a>
       <ul class="navbar__list">
         <li class="navbar__item">
-          <a href="/index.html" class="navbar__link">Home</a>
-        </li>
-        <li class="navbar__item">
           <a href="./pages/shuffle.html" class="navbar__link">Shuffle</a>
         </li>
         <li class="navbar__item">
-          <a href="#" class="navbar__link">Beers</a>
+          <a href="./pages/beers.html" class="navbar__link">Beers</a>
         </li>
         <li class="navbar__item">
-          <a href="#" class="navbar__link">Contact</a>
+          <a href="./pages/about.html" class="navbar__link">About</a>
         </li>
       </ul>
       <div class="navbar__hamburger">
@@ -36,6 +33,18 @@
         <div class="line3"></div>
       </div>
     </nav>
+    <main class="main-index">
+      <section>
+        <p>Start the beer shuffle to get your beer inspiration</p>
+      </section>
+
+      <button
+        class="start-btn"
+        onclick="window.location.href='./pages/shuffle.html';"
+      >
+        <span class="start-btn__text">Let's start </span>
+      </button>
+    </main>
     <script src="./script/script.js"></script>
   </body>
 </html>

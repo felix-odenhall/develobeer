@@ -12,7 +12,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: "Special Elite", cursive;
 }
 
 #shuffle #shuffle__container {
@@ -42,12 +41,6 @@
 
 #shuffle #shuffle__container img {
   height: 40vh;
-}
-
-@media only screen and (min-width: 481px) {
-  #shuffle #shuffle__container {
-    margin: 15px;
-  }
 }
 
 #shuffle #shuffle__container h2 {

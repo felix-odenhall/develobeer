@@ -17,13 +17,14 @@
       -ms-flex-align: center;
           align-items: center;
   font-family: "Comfortaa", cursive;
-  height: 10vh;
+  height: 8vh;
+  z-index: 100;
 }
 
 .navbar__logo {
   text-decoration: none;
   color: #f1f1f1;
-  margin-left: 4vw;
+  margin-left: 3vw;
   font-size: 1.6em;
   font-weight: 700;
 }
@@ -42,7 +43,7 @@
 .navbar__list a {
   text-decoration: none;
   font-size: 1.2em;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   font-weight: 700;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
@@ -58,13 +59,15 @@
 }
 
 .navbar__hamburger div {
-  width: 25px;
+  width: 20px;
   height: 5px;
   margin: 3px;
-  background-color: red;
 }
 
 @media only screen and (max-width: 481px) {
+  .navbar {
+    height: 10vh;
+  }
   .navbar__list {
     border-bottom: 2px solid rgba(241, 241, 241, 0.8);
     border-left: 2px solid rgba(241, 241, 241, 0.8);
@@ -88,7 +91,8 @@
     right: 0;
     width: 100vw;
     height: 70vh;
-    background-color: #f1f1f1;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#e2e1e1));
+    background-image: linear-gradient(#f1f1f1, #e2e1e1);
     padding: 3vh;
     border-radius: 0 0 20px 0;
     -webkit-transform: translateX(-110%);
@@ -133,12 +137,27 @@
   .toggle .line1 {
     -webkit-transform: rotate(-45deg) translate(-5px, 6px);
             transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #fca311;
   }
   .toggle .line2 {
-    opacity: 0;
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    background-color: #fca311;
   }
   .toggle .line3 {
     -webkit-transform: rotate(45deg) translate(-5px, -6px);
             transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #fca311;
+  }
+}
+
+#link-active {
+  border-bottom: 2px solid #fca311;
+  color: #f1f1f1;
+}
+
+@media only screen and (max-width: 481px) {
+  #link-active {
+    color: #171717;
   }
 }

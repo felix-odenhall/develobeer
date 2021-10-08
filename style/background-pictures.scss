@@ -1,0 +1,41 @@
+.background-picture-landing {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/jon-parry-C8eSYwQkwHw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(40%) contrast(80%);
+}
+.background-picture {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/mockaroon-YqUeLG7fMr4-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(40%) contrast(80%) sepia(0.1) saturate(200%);
+}
+
+.background-picture-about {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/mockaroon-YqUeLG7fMr4-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(40%) contrast(80%) sepia(0.2) saturate(200%)
+    hue-rotate(670deg);
+}
