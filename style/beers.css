@@ -1,0 +1,109 @@
+.main-beer {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 481px) {
+  .main-beer {
+    max-width: 800px;
+  }
+}
+
+.container-beer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-beer__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e5e5e5;
+  margin: 10px;
+  width: 180px;
+  height: 280px;
+  font-family: "Special Elite", cursive;
+  font-size: 0.78em;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 10px 2px #979797;
+          box-shadow: 0 3px 10px 2px #979797;
+}
+
+.container-beer__card a {
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.container-beer__card img {
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+.container-beer__card p {
+  margin-top: 10px;
+  font-size: 0.75em;
+}
+
+.container-beer__card:hover {
+  -webkit-animation: card_pop 0.2s linear alternate;
+          animation: card_pop 0.2s linear alternate;
+  background-color: #f1f1f1;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #171717;
+}
+
+@-webkit-keyframes card_pop {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #e5e5e5;
+  }
+  20% {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    background-color: #f1f1f1;
+  }
+}
+
+@keyframes card_pop {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    background-color: #e5e5e5;
+  }
+  20% {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    background-color: #f1f1f1;
+  }
+}
