@@ -8,7 +8,7 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background-image: url(https://raw.githubusercontent.com/Felix-Navidad/develobeer/main/img/jon-parry-C8eSYwQkwHw-unsplash.jpg);
+  background-image: url("/img/background-landing.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +23,7 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background-image: url(https://raw.githubusercontent.com/Felix-Navidad/develobeer/main/img/mockaroon-YqUeLG7fMr4-unsplash.jpg);
+  background-image: url("/img/background-stone.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -38,7 +38,7 @@
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background-image: url(https://raw.githubusercontent.com/Felix-Navidad/develobeer/main/img/mockaroon-YqUeLG7fMr4-unsplash.jpg);
+  background-image: url("/img/background-stone.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -488,7 +488,7 @@
 }
 
 body {
-  font-family: "Special Elite", cursive;
+  font-family: 'Special Elite', cursive;
 }
 
 header {
@@ -555,7 +555,7 @@ header h1 {
 
 .main-index .start-btn__text {
   font-size: 2em;
-  font-family: "Special Elite", cursive;
+  font-family: 'Special Elite', cursive;
   font-weight: 700;
 }
 
