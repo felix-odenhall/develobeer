@@ -6,11 +6,10 @@ function createPreviewBeer(beer) {
   if (!document.getElementById('shuffle__container')) return null;
   let wrapper = document.getElementById('shuffle__container');
   wrapper.innerHTML = ` 
-    <a href="${beer.link}" target="_blank">  
-    <img src="${beer.previewImage}" alt="A random image of a beer" />
+    <img src="${beer.img}" alt="A image of the randomized beer" />
       <div class="card-wrapper__content">
        <h2>
-       ${beer.brewery}<br>${beer.nameOfBeer}
+       ${beer.brewery}<br>${beer.beer}
        </h2>
       </div>
       </a>`;
@@ -19,16 +18,16 @@ function createPreviewBeer(beer) {
 // Creates the porperties that we use in functions "createPreviewBeer" and "createGrid".
 // I have tried to not include this and it works, but it's easier to read the code with these properties.
 
-function formatPost(post) {
-  let formated = {
-    id: post.id,
-    brewery: post.title.rendered,
-    previewImage: post._embedded['wp:featuredmedia'][0].source_url,
-    nameOfBeer: post.excerpt.rendered,
-    link: 'https://www.systembolaget.se/produkt/ol/' + post.slug,
-  };
-  return formated;
-}
+// function formatPost(post) {
+//   let formated = {
+//     id: post.id,
+//     brewery: post.title.rendered,
+//     previewImage: post._embedded['wp:featuredmedia'][0].source_url,
+//     nameOfBeer: post.excerpt.rendered,
+//     link: 'https://www.systembolaget.se/produkt/ol/' + post.slug,
+//   };
+//   return formated;
+// }
 
 // Creates the beer cards for the beer page.
 // We need the function "createGrid" because these cards will look different and have a white background,
@@ -44,11 +43,10 @@ function createGrid(data) {
     let wrapper = document.querySelector('.container-beer');
     wrapper.innerHTML += ` 
     <div class="container-beer__card">
-    <a href="${data[i].link}" target="_blank">  
-    <img src="${data[i].previewImage}" alt="A random image of a beer" />
+    <img src="${data[i].img}" alt="A random image of a beer" />
       <div class="card-wrapper__content">
        <h2>
-       ${data[i].brewery}<br>${data[i].nameOfBeer}
+       ${data[i].brewery}<br>${data[i].beer}
        </h2>
       </div>
       </a>
@@ -61,30 +59,27 @@ function createGrid(data) {
 // "getPosts" is called in the body element on the pages: "shuffle.html" and "beers.html" which runs this function as we enter the pages.
 
 function getPosts() {
-  fetch('http://localhost:8888/wp-json/wp/v2/posts?_embed&per_page=100')
-    .then((response) => response.json())
+  fetch('../data/data.json')
+    .then((data) => data.json())
     .then((data) => {
+      console.log(data);
       // create formatedPosts which is an empty array, then we loop through all the data pulled from the json file.
       // the push method is used to insert all of the json data into the array.
-      let formatedPosts = [];
-      for (let i = 0; i < data.length; i++) {
-        formatedPosts.push(formatPost(data[i]));
-      }
       // Here we call the function "createGrid" and passing the array "formatedPosts" to the function.
-      createGrid(formatedPosts);
+      createGrid(data);
 
       // this is where we ge tthe random number. we use -1 to adjust for 0 in the array. Otherwise we would never get the first object
       //     and sometimes look for more than the last number, which do not exists.
       let randomNumber = getRandomNumber(data.length - 1);
       // We call the function "createPreviewBeer" and then passing it the array with a random index.
-      createPreviewBeer(formatedPosts[randomNumber]);
+      createPreviewBeer(data[randomNumber]);
 
       if (!document.getElementById('shuffle-btn')) return null;
       // When clicking the "shuffle-btn" we generate a random number and the run "createPreviewBeer" again.
       const shuffleBtn = document.getElementById('shuffle-btn');
       shuffleBtn.addEventListener('click', () => {
         randomNumber = getRandomNumber(data.length - 1);
-        createPreviewBeer(formatedPosts[randomNumber]);
+        createPreviewBeer(data[randomNumber]);
       });
     });
 }
